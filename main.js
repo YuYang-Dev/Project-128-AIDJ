@@ -1,3 +1,4 @@
+
 song = "";
 leftWristX = 0;
 leftWristY = 0;
@@ -19,6 +20,11 @@ function setup()
 
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
+}
+
+function draw()
+{
+    image(video, 0, 0, 600, 500);
 }
 
 function modelLoaded()
